@@ -1,7 +1,13 @@
-const express = require('express')
-const layout = require('./views/layout')
+const express = require('express');
+const layout = require('./views/layout');
 
 const app = express();
+
+const wikiRouter = require('./routes/wiki');
+const userRouter = require('./routes/user');
+
+app.use('/wiki', wikiRouter);
+
 
 const { db } = require('./models');
 const models = require('./models');
