@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
   res.send(layout(''))
 });
 
+app.get((req, res, next) => {
+  res.redirect('/wiki')
+})
+
 db.authenticate().then(() => {
   console.log('connected to the database');
 })

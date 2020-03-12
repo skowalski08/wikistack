@@ -2,6 +2,10 @@ const express = require('express')
 const router = express();
 const addPage = require('../views/addPage')
 
+// router.use((req, res, next) => {
+//     res.send('got to GET /wiki/')
+// })
+
 
 router.get('/',(req, res, next) =>{
     res.send('got to GET /wiki/');
